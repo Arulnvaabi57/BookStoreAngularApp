@@ -1,0 +1,30 @@
+
+#sect1 {
+  height: 650px;
+  color: #fff;
+  background-image: url("../../assets/images/Lib_Image.webp");
+  background-size: 100%;
+  background-size: cover;
+}
+
+.card {
+  margin-left: 13%;
+  height: 100px;
+  text-align: center;
+  max-width: 75%
+}
+
+a {
+  font-size: xx-large;
+  font-family: 'Bookman Old Style';
+  text-decoration: none;
+}
+
+  a:hover {
+    color: white;
+  }
+
+.card:hover {
+  background-color: cornflowerblue;
+  color: white;
+}

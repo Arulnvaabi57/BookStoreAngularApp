@@ -1,0 +1,119 @@
+<app-nav-menu></app-nav-menu>
+<div style="background-color: aliceblue; height:100%">
+  <div class="container">
+
+    <form [formGroup]="BookForm">
+
+      <h3>Add your book to the store</h3>
+      <br />
+      <div class="row">
+        <div class="col-3">
+          ISBN
+        </div>
+        <div class="col-5">
+          <input type="hidden" formControlName="bookIsbn">
+          <input type="text" formControlName="bookIsbn">
+          <div *ngIf="submitted && BookForm.controls.bookIsbn.errors" class="text-danger">
+            <div *ngIf="BookForm.controls.bookIsbn.errors.required">Isbn is required</div>
+            <div *ngIf="BookForm.controls.bookIsbn.errors.pattern">Enter only number</div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-3">
+          Name
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="bookName">
+          <div *ngIf="submitted && BookForm.controls.bookName.errors" class="text-danger">
+            <div *ngIf="BookForm.controls.bookName.errors.required">Book Name is required</div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-3">
+          Author Name
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="authorName">
+          <div *ngIf="submitted && BookForm.controls.authorName.errors" class="text-danger">
+            <div *ngIf="BookForm.controls.authorName.errors.required">Author Name is required</div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-3">
+          Publisher Name
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="publisherName">
+          <div *ngIf="submitted && BookForm.controls.publisherName.errors" class="text-danger">
+            <div *ngIf="BookForm.controls.publisherName.errors.required">Publisher is required</div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-3">
+          Price
+        </div>
+        <div class="col-5">
+          <input type="hidden" formControlName="price">
+          <input type="text" formControlName="price">
+          <div *ngIf="submitted && BookForm.controls.price.errors" class="text-danger">
+            <div *ngIf="BookForm.controls.price.errors.required">Price is required</div>
+            <div *ngIf="BookForm.controls.price.errors.pattern">Enter only number.</div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-3">
+          Discount
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="discount">
+          <div *ngIf="submitted && BookForm.controls.discount.errors" class="text-danger">
+            <div *ngIf="BookForm.controls.discount.errors.required">Discount is required</div>
+            <div *ngIf="BookForm.controls.discount.errors.pattern">Enter only number.</div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-3">
+          Language
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="language">
+          <div *ngIf="submitted && BookForm.controls.language.errors" class="text-danger">
+            <div *ngIf="BookForm.controls.language.errors.required">Language is required</div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-3">
+          Publication Year
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="publishedYear">
+          <div *ngIf="submitted && BookForm.controls.publishedYear.errors" class="text-danger">
+            <div *ngIf="BookForm.controls.publishedYear.errors.required">Publication Year is required</div>
+            <div *ngIf="BookForm.controls.publishedYear.errors.pattern">Enter only number.</div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-1"></div>
+        <button id="submitbtn" type="submit" (click)="submit()" class="btn btn-outline-primary">{{EventValue}}</button>
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        <button id="submitbtn" type="reset" (click)="reset()" class="btn btn-outline-danger">{{ResetValue}}</button>
+      </div>
+    </form>
+  </div>
+</div>

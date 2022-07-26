@@ -1,0 +1,15 @@
+﻿namespace BookStoreApp.Models
+{
+    public class Book
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string AuthorName { get; set; }
+        public string PublisherName { get; set; }
+        public int Price { get; set; }
+        public int Discount { get; set; }
+        public string Language { get; set; }
+        public int PublishedYear { get; set; }
+        public int Isbn { get; set; }
+    }
+}

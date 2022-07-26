@@ -1,0 +1,33 @@
+<app-nav-menu></app-nav-menu>
+<div class="container">
+  <br />
+  <h1>All Available Books in store</h1>
+  <p *ngIf="!books"><em>Loading...</em></p>
+  <br />
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="books">
+    <thead>
+      <tr>
+        <th>ISBN</th>
+        <th>Name</th>
+        <th>Author Name</th>
+        <th>Publisher Name</th>
+        <th>Price</th>
+        <th>Discount</th>
+        <th>Language</th>
+        <th>Published Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>{{ book.isbn }}</td>
+        <td>{{ book.name }}</td>
+        <td>{{ book.authorName }}</td>
+        <td>{{ book.publisherName }}</td>
+        <td>{{ book.price }}</td>
+        <td>{{ book.discount }}</td>
+        <td>{{ book.language }}</td>
+        <td>{{ book.publishedYear }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
